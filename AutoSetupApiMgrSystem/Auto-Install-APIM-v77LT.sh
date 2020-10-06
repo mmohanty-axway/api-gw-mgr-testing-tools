@@ -4,7 +4,8 @@
 # -> adopted to v7.7.LT as installer behaviours was slightly changed
 # ===============================================================================
 # Author:  R. Kiessling, Axway GmbH
-# Changed: 10.08.2020
+# Modified By: Monalisha Mohanty
+# Changed: 21.09.2020
 
 # CLI Parameters
 
@@ -103,7 +104,7 @@ if [ -d ${installSourceDir} ]; then
   printf "DEBUG: "
   pwd
   find . -name APIGateway_${apimVersion}*_Install_linux*.run
-  axwayInstaller=$( find . -name APIGateway_${apimVersion}*_Install_linux*.run )
+  axwayInstaller=$( find . -name APIGateway_${apimVersion}*.run )
   printf "INFO: Axway Installer=${axwayInstaller}\n"
 
   if [ "X${axwayInstaller}" = "X" ] || [ ! -f "${axwayInstaller}" ]; then
